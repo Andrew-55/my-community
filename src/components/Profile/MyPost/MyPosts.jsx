@@ -2,20 +2,36 @@ import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
 
-const MyPosts = () => {
+
+const MyPosts = (props) => {
+
+    let postsElements = props.posts.map(post => <Post message={post.message} count={post.likecount} />)
+
+    let newPostElement = React.createRef();
+
+    let addPost = () => {
+        props.addPost();
+    }
+
+    let onPostChange = () => {
+        let newText = newPostElement.current.value;
+        props.updateNewPostText(newText);
+    }
 
     return (
 
-        <div>
-            My posts
+        <div className={classes.myPostsBlock}>
+            <h3>My posts</h3>
             <div>
-                <textarea></textarea>
-                <button>Add post</button>
+                <div>
+                    <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText} />
+                </div>
+                <div>
+                    <button onClick={addPost}>Add post</button>
+                </div>
             </div>
             <div className={classes.posts}>
-                <Post message='Hi, How are you?' count='15' />
-                <Post message='It is my first post' count='20' />
-
+                {postsElements}
             </div>
         </div>
     )

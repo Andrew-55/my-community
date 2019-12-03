@@ -1,31 +1,38 @@
 import React from 'react';
 import classes from './Dialogs.module.css';
-import { NavLink } from 'react-router-dom';
+import DialogItem from './DialogItem/DialogItem';
+import Message from './Message/Message';
+
 
 const Dialogs = (props) => {
+
+    let DialogsElements = props.state.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />);
+    let MessangesElements = props.state.messages.map(messageIt => <Message message={messageIt.message} id={messageIt.id} />)
+
+    let newMessageElement = React.createRef();
+
+    let addMessage = () => {
+        props.addMessage();
+    }
+
+    let onMessageChange = () => {
+        let newText = newMessageElement.current.value;
+        props.updateNewMessageText(newText);
+    }
+    debugger;
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>
-                <div className={`${classes.dialog} ${classes.active}`}>
-                    <NavLink to='/dialogs/1'>Dimych</NavLink>
-                </div>
-                <div className={classes.dialog}>
-                    <NavLink to='/dialogs/2'>Andrew</NavLink>
-                </div>
-                <div className={classes.dialog}>
-                    <NavLink to='/dialogs/3'>Sveta</NavLink>
-                </div>
-                <div className={classes.dialog}>
-                    <NavLink to='/dialogs/4'>Valera</NavLink>
-                </div>
-                <div className={classes.dialog}>
-                    <NavLink to='/dialogs/5'>Sasha</NavLink>
-                </div>
+                {DialogsElements}
             </div>
             <div className={classes.messages}>
-                <div className={classes.message}>Hi</div>
-                <div className={classes.message}>How are you?</div>
-                <div className={classes.message}>Yo</div>
+                {MessangesElements}
+                <div>
+                    <textarea onChange={onMessageChange} ref={newMessageElement} value={props.state.newMessageText} ></textarea>
+                </div>
+                <div>
+                    <button onClick={addMessage}>Add post</button>
+                </div>
             </div>
         </div>
     )
