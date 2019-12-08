@@ -12,7 +12,7 @@ import DialogsConteiner from './components/Dialogs/DialogsConteiners';
 import UsersConteiners from './components/Users/UsersConteiners';
 
 const App = (props) => {
-  debugger;
+
   return (
     <div className='app-wrapper'>
       <Header />
