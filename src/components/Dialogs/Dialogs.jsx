@@ -7,8 +7,8 @@ import Message from './Message/Message';
 const Dialogs = (props) => {
     debugger;
 
-    let DialogsElements = props.dialogsPage.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />);
-    let MessangesElements = props.dialogsPage.messages.map(messageIt => <Message message={messageIt.message} id={messageIt.id} />)
+    let DialogsElements = props.dialogsPage.dialogs.map(dialog => <DialogItem name={dialog.name} key={dialog.id} id={dialog.id} />);
+    let MessangesElements = props.dialogsPage.messages.map(messageIt => <Message message={messageIt.message} key={messageIt.id} id={messageIt.id} />)
 
     let addMessage = () => {
         props.addMessageActionCreator();
