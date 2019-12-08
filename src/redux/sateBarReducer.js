@@ -1,4 +1,9 @@
-const sateBarReducer = (state, action) => {
+let initialState = {
+
+}
+
+
+const sateBarReducer = (state = initialState, action) => {
 
     return state;
 }
