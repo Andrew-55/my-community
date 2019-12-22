@@ -72,6 +72,7 @@ export const updateNewPostTextActionCreator = (newText) => {
 export const setUserProfile = (profile) => ({ type: SET_USERS_PROFILE, profile })
 export const setStatus = (status) => ({ type: SET_STATUS, status })
 
+
 export const getUserProfile = (userId) => {
     return (dispatch) => {
         profileAPI.getProfile(userId).then(response => {
@@ -92,7 +93,7 @@ export const updateStatus = (status) => {
     return (dispatch) => {
         profileAPI.updateStatus(status).then(response => {
             if (response.data.resultCode === 0) {
-                dispatch(updateStatus(response.data));
+                dispatch(setStatus(status));
             }
         });
     }

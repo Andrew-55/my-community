@@ -16,8 +16,8 @@ let mapDispatchToProps = (dispatch) => {
         updateNewMessageTextActionCreator: (newText) => {
             dispatch(updateNewMessageTextActionCreator(newText));
         },
-        addMessageActionCreator: () => {
-            dispatch(addMessageActionCreator());
+        addMessageActionCreator: (newMessageText) => {
+            dispatch(addMessageActionCreator(newMessageText));
         }
     }
 }
@@ -26,9 +26,5 @@ const DialogsConteiner = compose(
     connect(mapStateToProps, mapDispatchToProps),
     withAuthRedirect
 )(Dialogs)
-
-// let AuthRedirectConteiners = withAuthRedirect(Dialogs);
-
-// const DialogsConteiner = connect(mapStateToProps, mapDispatchToProps)(AuthRedirectConteiners);
 
 export default DialogsConteiner;
