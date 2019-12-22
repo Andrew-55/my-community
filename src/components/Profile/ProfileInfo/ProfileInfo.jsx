@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './ProfileInfo.module.css';
 import Preloarder from '../../common/Preloarder/Preloader';
+import ProfileStatus from './ProfileStatus';
 
 const ProfileInfo = (props) => {
-    debugger;
 
     if (!props.profile) {
         return <Preloarder />
@@ -11,12 +11,12 @@ const ProfileInfo = (props) => {
     return (
         <div>
 
-            <div>
+            {/* <div>
                 <img className={classes.img} src={props.imgUrl} alt='' />
-            </div>
+            </div> */}
             <div className={classes.descriptionBlock}>
                 <img src={props.profile.photos.large} alt='' />
-                ava+discription
+                <ProfileStatus status={props.status} updateStatus={props.updateStatus} />
             </div>
         </div>
     )

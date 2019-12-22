@@ -3,7 +3,7 @@ import classes from './Header.module.css';
 import { NavLink } from 'react-router-dom';
 
 const Header = (props) => {
-    debugger;
+
     return (
         <header className={classes.header}>
             <img src='https://png.pngtree.com/png-clipart/20190924/original/pngtree-funny-yellow-bear-cartoon-character-png-image_4815036.jpg' alt='' />

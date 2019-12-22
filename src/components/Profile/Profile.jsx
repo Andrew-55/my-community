@@ -4,11 +4,10 @@ import MyPostsConteiner from './MyPost/MyPostsConteiners';
 
 
 const Profile = (props) => {
+
     return (
         <div className=''>
-            <ProfileInfo imgUrl='https://avatars.mds.yandex.net/get-pdb/34158/200a7df0-56a0-4f89-9c6e-40f5765995e9/s1200'
-                profile={props.profile}
-            />
+            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} />
             <MyPostsConteiner store={props.store} />
         </div >
     )
