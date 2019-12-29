@@ -4,23 +4,17 @@ import DialogItem from './DialogItem/DialogItem';
 import Message from './Message/Message';
 import { Redirect } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
+import { Texterea } from '../common/FormsControls/FormsControls';
+import { required, maxLenghtCreator } from '../../redux/utils/validators/validators';
 
 const Dialogs = (props) => {
 
     let DialogsElements = props.dialogsPage.dialogs.map(dialog => <DialogItem name={dialog.name} key={dialog.id} id={dialog.id} />);
     let MessangesElements = props.dialogsPage.messages.map(messageIt => <Message message={messageIt.message} key={messageIt.id} id={messageIt.id} />)
-    // let newMessageText = props.state.newMessageText
 
-    let addMessage = (newMessageText) => {
-        props.addMessageActionCreator(newMessageText);
-    }
 
-    // let onMessageChange = (e) => {
-    //     let newText = e.target.value;
-    //     props.updateNewMessageTextActionCreator(newText);
-    // }
     let onNewMessageChange = (values) => {
-        addMessage(values.newMessageText)
+        props.addMessage(values.newMessageText)
     }
 
     if (!props.isAuth) {
@@ -40,11 +34,14 @@ const Dialogs = (props) => {
     )
 }
 
+const maxLenght20 = maxLenghtCreator(20);
+
 const AddMessageForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                <Field component="textarea" name="newMessageText" placeholder={'Enter your message'} />
+                <Field component={Texterea} name="newMessageText" placeholder={'Enter your message'}
+                    validate={[required, maxLenght20]} />
             </div>
             <div>
                 <button >Add post</button>
