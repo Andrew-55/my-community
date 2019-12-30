@@ -89,13 +89,14 @@ export const setTonalUsersCount = (totalCount) => { return { type: SET_TOTAL_USE
 export const toggleIsFetching = (isFetching) => { return { type: TOGGLE_IS_FETCHING, isFetching } }
 export const toggleIsFollowing = (isFetching, userId) => { return { type: TOGGLE_IS_FOLLOWING, isFetching, userId } }
 
-export const getUsers = (currentPage, pageSize) => {
+export const getUsers = (page, pageSize) => {
     debugger;
     return (dispatch) => {
 
         dispatch(toggleIsFetching(true));
+        dispatch(setCurrentPage(page));
 
-        userAPI.getUser(currentPage, pageSize).then(data => {
+        userAPI.getUser(page, pageSize).then(data => {
             dispatch(toggleIsFetching(false));
             dispatch(setUsers(data.items));
             dispatch(setTonalUsersCount(data.totalCount))
