@@ -24,14 +24,19 @@ const AddNewPostForm = (props) => {
     )
 }
 
-const MyPosts = (props) => {
+const AddNewPostReduxForm = reduxForm({
+    // a unique name for the form
+    form: 'ProfileAddNewPostForm'
+})(AddNewPostForm)
 
-    let postsElements = props.posts.map(post => <Post message={post.message} count={post.likecount} />)
+
+const MyPosts = React.memo((props) => {
+
+    let postsElements = [...props.posts].reverse().map(post => <Post message={post.message} count={post.likecount} />)
 
     let onAddPost = (values) => {
         props.addPost(values.newPostText);
     }
-
 
     return (
 
@@ -43,13 +48,6 @@ const MyPosts = (props) => {
             </div>
         </div>
     )
-}
-
-
-const AddNewPostReduxForm = reduxForm({
-    // a unique name for the form
-    form: 'ProfileAddNewPostForm'
-})(AddNewPostForm)
-
+});
 
 export default MyPosts;

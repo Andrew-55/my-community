@@ -11,7 +11,6 @@ import ProfileConteiners from './components/Profile/ProfileConteiners';
 import HeaderConteiner from './components/Header/HeaderConteiner';
 import LoginPage from './components/Login/Login';
 import { connect } from 'react-redux';
-//import { getUserData } from './redux/authReducer';
 import { compose } from 'redux';
 import { initializeApp } from './redux/appReducer';
 import Preloarder from './components/common/Preloarder/Preloader';
