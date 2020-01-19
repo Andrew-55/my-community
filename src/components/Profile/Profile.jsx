@@ -3,12 +3,12 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 import MyPostsConteiner from './MyPost/MyPostsConteiners';
 
 
-const Profile = (props) => {
+const Profile = ({ profile, status, updateStatus, store }) => {
 
     return (
         <div className=''>
-            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} />
-            <MyPostsConteiner store={props.store} />
+            <ProfileInfo profile={profile} status={status} updateStatus={updateStatus} />
+            <MyPostsConteiner store={store} />
         </div >
     )
 }

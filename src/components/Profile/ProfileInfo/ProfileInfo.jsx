@@ -4,9 +4,9 @@ import Preloarder from '../../common/Preloarder/Preloader';
 //import ProfileStatus from './ProfileStatus';
 import ProfileStatusHooks from './ProfileStatusHooks';
 
-const ProfileInfo = (props) => {
+const ProfileInfo = ({ profile, status, updateStatus }) => {
 
-    if (!props.profile) {
+    if (!profile) {
         return <Preloarder />
     }
     return (
@@ -16,8 +16,8 @@ const ProfileInfo = (props) => {
                 <img className={classes.img} src={props.imgUrl} alt='' />
             </div> */}
             <div className={classes.descriptionBlock}>
-                <img src={props.profile.photos.large} alt='' />
-                <ProfileStatusHooks status={props.status} updateStatus={props.updateStatus} />
+                <img src={profile.photos.large} alt='' />
+                <ProfileStatusHooks status={status} updateStatus={updateStatus} />
             </div>
         </div>
     )
