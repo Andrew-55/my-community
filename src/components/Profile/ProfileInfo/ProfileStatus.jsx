@@ -1,5 +1,4 @@
 import React from 'react';
-//import classes from './ProfileInfo.module.css';
 
 class ProfileStatus extends React.Component {
 
@@ -24,7 +23,7 @@ class ProfileStatus extends React.Component {
     }
     componentDidUpdate(prevProps, prevState) {
 
-        console.log('componentDitUpdate')
+
         if (prevProps.status !== this.props.status) {
             this.setState({
                 status: this.props.status

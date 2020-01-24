@@ -8,7 +8,6 @@ import { Redirect } from 'react-router-dom';
 import style from '../common/FormsControls/FormsControls.module.css';
 
 const LoginForm = ({ handleSubmit, error }) => {
-    debugger;
 
     return (
         <form onSubmit={handleSubmit}>
@@ -16,9 +15,7 @@ const LoginForm = ({ handleSubmit, error }) => {
             {creatField("Email", "email", [required], Input)}
             {creatField("Password", "password", [required], Input, { type: "password" })}
             {creatField(null, "rememberMe", [], Input, { type: "checkbox" }, "remember me")}
-            {/* <div>
-                <Field component={Input} name={"rememberMe"} type={"checkbox"} />remember me
-                </div> */}
+
             {error && <div className={style.formSymmaryError}>
                 {error}
             </div>}
