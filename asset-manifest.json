@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/Andrew-55/my-community/static/css/main.332d859c.chunk.css",
+    "main.js": "/Andrew-55/my-community/static/js/main.035a89a0.chunk.js",
+    "main.js.map": "/Andrew-55/my-community/static/js/main.035a89a0.chunk.js.map",
+    "runtime-main.js": "/Andrew-55/my-community/static/js/runtime-main.835744a2.js",
+    "runtime-main.js.map": "/Andrew-55/my-community/static/js/runtime-main.835744a2.js.map",
+    "static/js/2.9711f177.chunk.js": "/Andrew-55/my-community/static/js/2.9711f177.chunk.js",
+    "static/js/2.9711f177.chunk.js.map": "/Andrew-55/my-community/static/js/2.9711f177.chunk.js.map",
+    "static/css/3.bd9ab8de.chunk.css": "/Andrew-55/my-community/static/css/3.bd9ab8de.chunk.css",
+    "static/js/3.107a369e.chunk.js": "/Andrew-55/my-community/static/js/3.107a369e.chunk.js",
+    "static/js/3.107a369e.chunk.js.map": "/Andrew-55/my-community/static/js/3.107a369e.chunk.js.map",
+    "static/css/4.e85b2cd5.chunk.css": "/Andrew-55/my-community/static/css/4.e85b2cd5.chunk.css",
+    "static/js/4.e1212160.chunk.js": "/Andrew-55/my-community/static/js/4.e1212160.chunk.js",
+    "static/js/4.e1212160.chunk.js.map": "/Andrew-55/my-community/static/js/4.e1212160.chunk.js.map",
+    "index.html": "/Andrew-55/my-community/index.html",
+    "precache-manifest.a1884b61517b8093ed2f27f57b22fa6d.js": "/Andrew-55/my-community/precache-manifest.a1884b61517b8093ed2f27f57b22fa6d.js",
+    "service-worker.js": "/Andrew-55/my-community/service-worker.js",
+    "static/css/3.bd9ab8de.chunk.css.map": "/Andrew-55/my-community/static/css/3.bd9ab8de.chunk.css.map",
+    "static/css/4.e85b2cd5.chunk.css.map": "/Andrew-55/my-community/static/css/4.e85b2cd5.chunk.css.map",
+    "static/css/main.332d859c.chunk.css.map": "/Andrew-55/my-community/static/css/main.332d859c.chunk.css.map",
+    "static/js/2.9711f177.chunk.js.LICENSE": "/Andrew-55/my-community/static/js/2.9711f177.chunk.js.LICENSE",
+    "static/media/Cube-1s-200px.svg": "/Andrew-55/my-community/static/media/Cube-1s-200px.3b493ed5.svg",
+    "static/media/User_default.png": "/Andrew-55/my-community/static/media/User_default.81834b04.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.835744a2.js",
+    "static/js/2.9711f177.chunk.js",
+    "static/css/main.332d859c.chunk.css",
+    "static/js/main.035a89a0.chunk.js"
+  ]
+}
