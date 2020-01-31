@@ -3,7 +3,7 @@ import ProfileInfo from './ProfileInfo/ProfileInfo';
 import MyPostsConteiner from './MyPost/MyPostsConteiners';
 
 
-const Profile = ({ profile, status, updateStatus, store, savePhoto, ...props }) => {
+const Profile = ({ profile, status, updateStatus, store, savePhoto, saveProfile, ...props }) => {
 
     return (
         <div className=''>
@@ -11,7 +11,8 @@ const Profile = ({ profile, status, updateStatus, store, savePhoto, ...props }) 
                 profile={profile}
                 status={status}
                 updateStatus={updateStatus}
-                savePhoto={savePhoto} />
+                savePhoto={savePhoto}
+                saveProfile={saveProfile} />
             <MyPostsConteiner store={store} />
         </div >
     )

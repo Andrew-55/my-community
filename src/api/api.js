@@ -50,6 +50,11 @@ export const profileAPI = {
                 'Content-Type': 'multipart/form-data'
             }
         })
+    },
+    saveProfile(profile) {
+        console.log("esss");
+        debugger;
+        return instance.put(`profile`, profile)
     }
 }
 
